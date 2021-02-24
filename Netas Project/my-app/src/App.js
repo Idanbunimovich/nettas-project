@@ -29,8 +29,8 @@ let soundArray = songArray.map((item,index) => {
             }
             else{
                 songPlay.shift();
-                songPlay[songPlay.length-1].sound.play();
-                playArray[songPlay[songPlay.length-1].index] = true;
+                songPlay[0].sound.play();
+                playArray[songPlay[0].index] = true;
 
 
             }

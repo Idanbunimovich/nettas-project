@@ -65,13 +65,12 @@ const Pad = (props) => {
                 playArray[index] = false;
 
                 //looking for the item in the queue to remove him
-                for(let i=0; i < songPlay.length; i++){
+                for(let i = 0; i < songPlay.length; i++){
                     if(songPlay[i].index === index){
-                        if(i < songPlay.length - 1){
+                        if(i !== songPlay.length - 1){
                             songPlay[i+1].sound.play();
-                            songPlay = songPlay.splice(i,1);
-
                         }
+                        songPlay = songPlay.splice(i,1);
 
 
                         break;
